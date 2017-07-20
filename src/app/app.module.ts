@@ -6,11 +6,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { SportsPage } from '../pages/sports/sports';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    SportsPage
   ],
   imports: [
     BrowserModule,
@@ -20,6 +22,7 @@ import { HomePage } from '../pages/home/home';
   entryComponents: [
     MyApp,
     HomePage,
+    SportsPage
   ],
   providers: [
     StatusBar,
@@ -27,4 +30,5 @@ import { HomePage } from '../pages/home/home';
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
-export class AppModule {}
+export class AppModule {
+}
