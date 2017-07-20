@@ -1,14 +1,50 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<button ion-button menuToggle icon-only>
+			<ion-icon name='menu'></ion-icon>
+		</button>
+		<ion-title>
+			Login
+		</ion-title>
+	</ion-navbar>
+
+	<style type="text/css">
+		@media screen and (min-width: 480px) {
+			iframe#sportsWidget {
+				width: 90vw;
+				height: 90vh;
+			}
+		}
+	</style>
+
+
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+	<div padding>
+		<div>
+			<iframe id="sportsWidget" height=640 width=520 srcdoc="
+			<script type=&quot;text/javascript&quot; >
+				(function(d){var mp = d.createElement('script'),h=d.getElementsByTagName('head')[0];
+				mp.type='text/javascript';
+				mp.async=true;
+				mp.src='http://www.maxpreps.com/includes/js/widget/widget.compressed.js';
+				h.appendChild(mp);
+				})(document);
+			</script>
+
+			<style type=&quot;text/css&quot;>
+				@media screen and (min-width: 480px) {
+					a#maxprep {
+						data-width: 90vw;
+						data-height: 90vh;
+					}
+				}
+			</style>
+
+			<a id = maxprep class=&quot;maxpreps-widget-link&quot; data-width=&quot;500&quot; data-height=&quot;600&quot; data-item-count=&quot;10&quot; data-type=&quot;wall&quot; data-include-header=&quot;true&quot; data-member-id=&quot;d53a8ac6-69a7-4296-9f31-effb70d5a189&quot; data-allow-scrollbar=&quot;true&quot; href=&quot;http://www.maxpreps.com/local/school/home.aspx?schoolid=0efc3aac-4b5a-49c4-a219-c7aa78250d14&quot; >
+			D'Evelyn High School School Info
+			</a>"></iframe>
+		</div>
+	</div>
 </ion-content>

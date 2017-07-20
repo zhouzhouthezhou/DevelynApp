@@ -1,14 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+	selector: 'page-home',
+	templateUrl: 'home.html'
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+	@ViewChild('username') uname;
+	@ViewChild('password') password;
 
-  }
+	constructor(public navCtrl: NavController) {
+
+	}
+
+	signIn(){
+		console.log(this.uname.value, this.password.value);
+	}
 
 }
