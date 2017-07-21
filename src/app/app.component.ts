@@ -12,8 +12,6 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage:any = HomePage;
-
-  // pages: Array<{title: string, component: any}>;
   
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -23,14 +21,11 @@ export class MyApp {
       splashScreen.hide();
     });
 
-    // this.pages = [
-    //   {title: "Homepage", component: HomePage},
-    //   {title: "Sports", component: SportsPage}
-    // ];
   }
 
-  goToSports(){
-    this.nav.setRoot(SportsPage);
+  goToPage(page){
+    // for(i=o; i < pages.length; i++)
+    // this.nav.setRoot(SportsPage);
   }
 }
 
