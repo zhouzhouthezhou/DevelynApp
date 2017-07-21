@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, MenuController } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the SportsPage page.
@@ -22,6 +23,17 @@ export class SportsPage {
   }
 
  openMenu() {
-   this.navCtrl.popToRoot();
+ 	this.menuCtrl.toggle();
+ 	// alert(this.menuCtrl.isOpen());
+  //  this.navCtrl.popToRoot();
  }
+
+
+	// goToHome(){
+	// 	this.navCtrl.popToRoot();
+	// }
+
+	// goToSports(){
+	// 	this.navCtrl.push(SportsPage);
+	// }
 }
