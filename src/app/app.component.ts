@@ -12,7 +12,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage:any = HomePage;
-  
+
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -24,8 +24,15 @@ export class MyApp {
   }
 
   goToPage(page){
-    // for(i=o; i < pages.length; i++)
-    // this.nav.setRoot(SportsPage);
+    var pages = [];
+    pages["Home"] = HomePage;
+    pages["Sports"] = SportsPage;
+    this.nav.setRoot(pages["Sports"]);
+    // for(var i = 0; i < pages.length; i++){
+    //   if (condition) {
+    //     // code...
+    //   }
+    // }
   }
 }
 

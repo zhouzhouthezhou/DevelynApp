@@ -11,39 +11,58 @@
 	<style type="text/css">
 		@media screen and (min-width: 480px) {
 			iframe#sportsWidget {
-				width: 85vw;
-				height: 85vh;
+				width: 90vw;
+				height: 90vh;
 			}
 		}
 	</style>
+
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			setMaxPrepsWidget($('iframe').innerWidth(), $('iframe').innerHeight());
+		});
+		$(window).resize(function(){
+			setMaxPrepsWidget($('iframe').innerWidth(), $('iframe').innerHeight());;
+		});
+
+		function setMaxPrepsWidget(width, height){
+			width = (parseInt(width)-15).toString();
+			height = (parseInt(height)-20).toString();
+			var code = '<script type="text/javascript" >(function(d){var mp = d.createElement("script"),h=d.getElementsByTagName("head")[0];mp.type="text/javascript";mp.async=true;mp.src="http://www.maxpreps.com/includes/js/widget/widget.compressed.js";h.appendChild(mp);})(document);</scrip'+'t><a class="maxpreps-widget-link" data-width="' + width + '" data-height="' + height + '" data-item-count="10" data-type="wall" data-include-header="true" data-member-id="d53a8ac6-69a7-4296-9f31-effb70d5a189" data-allow-scrollbar="true" href="http://www.maxpreps.com/local/school/home.aspx?schoolid=0efc3aac-4b5a-49c4-a219-c7aa78250d14" >D\'Evelyn High School School Info</a>';
+			$('#sportsWidget').attr('srcdoc', code);
+		}
+	</script>
 </ion-header>
 
 <ion-content padding>
-	<button ion-button color="light" (click)="openMenu()">Click me</button>
 	<div padding>
 		<div>
-			<iframe id="sportsWidget" height=640 width=520 srcdoc="
-			<script type=&quot;text/javascript&quot; >
-				(function(d){var mp = d.createElement('script'),h=d.getElementsByTagName('head')[0];
-				mp.type='text/javascript';
-				mp.async=true;
-				mp.src='http://www.maxpreps.com/includes/js/widget/widget.compressed.js';
-				h.appendChild(mp);
-			})(document);
-		</script>
-
-		<style type=&quot;text/css&quot;>
-			@media screen and (min-width: 480px) {
-			a#maxprep {
-			data-width: 90vw;
-			data-height: 90vh;
-		}
-	}
-</style>
-
-<a id = maxprep class=&quot;maxpreps-widget-link&quot; data-width=&quot;500&quot; data-height=&quot;600&quot; data-item-count=&quot;10&quot; data-type=&quot;wall&quot; data-include-header=&quot;true&quot; data-member-id=&quot;d53a8ac6-69a7-4296-9f31-effb70d5a189&quot; data-allow-scrollbar=&quot;true&quot; href=&quot;http://www.maxpreps.com/local/school/home.aspx?schoolid=0efc3aac-4b5a-49c4-a219-c7aa78250d14&quot; >
-	D'Evelyn High School School Info
-</a>"></iframe>
-</div>
-</div>
+			<iframe id="sportsWidget" srcdoc="Hello World">
+				<p>Max Preps Widget</p>
+			</iframe>
+		</div>
+	</div>
 </ion-content>
+
+<!-- 				<a id = maxprep class='maxpreps-widget-link' data-width='200' data-height='600' data-item-count='10' data-type='wall' data-include-header='true' data-member-id='d53a8ac6-69a7-4296-9f31-effb70d5a189' data-allow-scrollbar='true' href='http://www.maxpreps.com/local/school/home.aspx?schoolid=0efc3aac-4b5a-49c4-a219-c7aa78250d14'>D'Evelyn High School School Info</a>
+				<script type='text/javascript' >
+				document.getElementById('maxprep')[0];
+				alert(document.getElementById('maxprep')[0]);
+					(function(d){
+						//document.getElementsById('maxprep')[0].setAttribute('data-width', '600');
+						var mp = d.createElement('script'),h=d.getElementsByTagName('head')[0];
+						mp.type='text/javascript';
+						mp.async=true;
+						mp.src='http://www.maxpreps.com/includes/js/widget/widget.compressed.js';
+						h.appendChild(mp);
+					})(document);
+				</script>
+				<style type='text/css'>
+					@media screen and (min-width: 480px) {
+						a#maxprep {
+						data-width: 90vw
+						data-height: 90vh
+						}
+					}
+				</style> -->

@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams, MenuController } from 'ionic-angular';
 import { HomePage } from '../home/home';
+
 
 /**
  * Generated class for the SportsPage page.
@@ -9,31 +10,25 @@ import { HomePage } from '../home/home';
  * on Ionic pages and navigation.
  */
 
-@Component({
-  selector: 'page-sports',
-  templateUrl: 'sports.html',
-})
-export class SportsPage {
+ @Component({
+ 	selector: 'page-sports',
+ 	templateUrl: 'sports.html',
+ })
+ export class SportsPage {
+ 	public maxPrepsWidth;
+ 	constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController) {
+ 	}
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController) {
-  }
+ 	ionViewDidLoad() {
+ 		console.log('ionViewDidLoad SportsPage');
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SportsPage');
-  }
+ 		this.widgetInit();
+ 	}
 
- openMenu() {
- 	this.menuCtrl.toggle();
- 	// alert(this.menuCtrl.isOpen());
-  //  this.navCtrl.popToRoot();
+
+ 	widgetInit(){
+ 			this.maxPrepsWidth = 500;
+			// this.maxPrepsWidgetSrc = "<p>"hi"</p>"
+ 	}
+
  }
-
-
-	// goToHome(){
-	// 	this.navCtrl.popToRoot();
-	// }
-
-	// goToSports(){
-	// 	this.navCtrl.push(SportsPage);
-	// }
-}
