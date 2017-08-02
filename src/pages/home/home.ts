@@ -10,12 +10,4 @@ export class HomePage {
 	constructor(public navCtrl: NavController) {
 
 	}
-
-	goToHome(){
-		this.navCtrl.popToRoot();
-	}
-
-	goToSports(){
-		this.navCtrl.push(SportsPage);
-	}
 }

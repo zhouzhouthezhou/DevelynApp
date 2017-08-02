@@ -7,15 +7,21 @@
   </ion-header>
 
   <ion-content>
-    <ion-list>
+    <ion-list id="sidenav">
 
-      <button ion-item (click)="goToHome(Home)">
-        Home
-      </button>
+      <button ion-item (click)="goToPage('Home')">Home</button>
 
-      <button ion-item (click)="goToPage(Sports)">
-        Sports
-      </button>
+      <button ion-item (click)="menuItemHandler()">Sports</button>
+
+      <ion-item-group submenu id="test" *ngIf="showSubmenu">
+
+      	<button ion-item submenu-item (click)="goToPage('Sports')">General News</button>
+
+      	<button ion-item submenu-item>Sub menu item</button>
+
+      </ion-item-group>
+
+      <button ion-item (click)="goToPage('Settings')">Settings</button>
 
     </ion-list>
   </ion-content>

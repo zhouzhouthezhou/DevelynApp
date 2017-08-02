@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform, Nav } from 'ionic-angular';
+import { Platform, Nav, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -13,7 +13,7 @@ export class MyApp {
 
   rootPage:any = HomePage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public menuCtrl: MenuController) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -23,16 +23,19 @@ export class MyApp {
 
   }
 
+  showSubmenu: boolean = false;
+
   goToPage(page){
+    this.showSubmenu = false;
     var pages = [];
     pages["Home"] = HomePage;
     pages["Sports"] = SportsPage;
-    this.nav.setRoot(pages["Sports"]);
-    // for(var i = 0; i < pages.length; i++){
-    //   if (condition) {
-    //     // code...
-    //   }
-    // }
+    this.nav.setRoot(pages[page]);
+    this.menuCtrl.close();
+  }
+
+  menuItemHandler(): void {
+    this.showSubmenu = !this.showSubmenu;
   }
 }
 

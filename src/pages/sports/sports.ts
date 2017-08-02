@@ -22,6 +22,7 @@ import * as $ from 'jquery';
 
  	ionViewDidLoad() {
  		console.log('ionViewDidLoad SportsPage');
+
  		$(document).ready(function(){
 			setMaxPrepsWidget($('iframe').innerWidth(), $('iframe').innerHeight());
 		});
@@ -32,7 +33,7 @@ import * as $ from 'jquery';
 		function setMaxPrepsWidget(width, height){
 			width = (parseInt(width)-15).toString();
 			height = (parseInt(height)-20).toString();
-			var code = '<script type="text/javascript" >(function(d){var mp = d.createElement("script"),h=d.getElementsByTagName("head")[0];mp.type="text/javascript";mp.async=true;mp.src="http://www.maxpreps.com/includes/js/widget/widget.compressed.js";h.appendChild(mp);})(document);</scrip'+'t><a class="maxpreps-widget-link" data-width="' + width + '" data-height="' + height + '" data-item-count="10" data-type="wall" data-include-header="true" data-member-id="d53a8ac6-69a7-4296-9f31-effb70d5a189" data-allow-scrollbar="true" href="http://www.maxpreps.com/local/school/home.aspx?schoolid=0efc3aac-4b5a-49c4-a219-c7aa78250d14" >D\'Evelyn High School School Info</a>';
+			var code = '<script type="text/javascript" >(function(d){var mp = d.createElement("script"),h=d.getElementsByTagName("head")[0];mp.type="text/javascript";mp.async=true;mp.src="http://www.maxpreps.com/includes/js/widget/widget.compressed.js";h.appendChild(mp);})(document);</scrip'+'t><a class="maxpreps-widget-link" data-width="' + width + '" data-height="' + height + '" data-item-count="10" data-type="wall" data-include-header="true" data-member-id="d53a8ac6-69a7-4296-9f31-effb70d5a189" data-allow-scrollbar="true" data-link-color="006400" href="http://www.maxpreps.com/local/school/home.aspx?schoolid=0efc3aac-4b5a-49c4-a219-c7aa78250d14" >D\'Evelyn High School School Info</a>';
 			$('#sportsWidget').attr('srcdoc', code);
 		}
  	}
