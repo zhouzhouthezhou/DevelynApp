@@ -3,9 +3,17 @@
 		<button ion-button menuToggle>
 			<ion-icon name="menu"></ion-icon>
 		</button>
+
 		<ion-title>
 			Sports Ball
 		</ion-title>
+
+		<ion-buttons end>
+			<button id="moreButton" ion-button (click)="presentPopover($event)">
+				<ion-icon name="more"></ion-icon>
+			</button>
+		</ion-buttons>
+
 	</ion-navbar>
 
 	<style type="text/css">
@@ -21,7 +29,7 @@
 <ion-content padding>
 	<div padding>
 		<div>
-			<iframe id="sportsWidget" style="border: 0px" srcdoc="Hello World">
+			<iframe id="sportsWidget" style="border: 0px" srcdoc="If you see this eat a hot dog">
 				<p>Max Preps Widget</p>
 			</iframe>
 		</div>
