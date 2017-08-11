@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { SportsPage } from '../pages/sports/sports';
 import { SettingsPage } from '../pages/settings/settings';
 import { SportsListComponent } from '../components/sports-list/sports-list';
+import { SettingsProvider } from '../providers/settings/settings';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { SportsListComponent } from '../components/sports-list/sports-list';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    SettingsProvider
   ]
 })
 export class AppModule {
