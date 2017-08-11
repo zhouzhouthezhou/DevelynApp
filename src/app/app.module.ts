@@ -7,13 +7,16 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SportsPage } from '../pages/sports/sports';
+import { SettingsPage } from '../pages/settings/settings';
 import { SportsListComponent } from '../components/sports-list/sports-list';
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     SportsPage,
+    SettingsPage,
     SportsListComponent,
   ],
   imports: [
@@ -25,6 +28,7 @@ import { SportsListComponent } from '../components/sports-list/sports-list';
     MyApp,
     HomePage,
     SportsPage,
+    SettingsPage,
     SportsListComponent,
   ],
   providers: [

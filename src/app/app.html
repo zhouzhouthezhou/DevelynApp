@@ -8,13 +8,7 @@
 
   <ion-content>
     <ion-list id="sidenav">
-
-      <button ion-item (click)="goToPage('Home')">Home</button>
-
-      <button ion-item (click)="goToPage('Sports')">Sports</button>
-
-      <button ion-item (click)="goToPage('Settings')">Settings</button>
-
+      <button ion-item *ngFor="let page of pages" (click)="goToPage(page.page)"><h2>{{page.name}}</h2></button>
     </ion-list>
   </ion-content>
 

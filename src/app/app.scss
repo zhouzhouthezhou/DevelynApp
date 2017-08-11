@@ -15,18 +15,15 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-.toolbar-background{
-	background-color: #006400;
-}
+//check settings.scss for theming settingsa
 
-.toolbar-title{
-	color: white;
+.item-md{
+	padding-left: 0px;
+	padding-right: 0px;
 }
-
-.icon{
-	color: white;
+h2{
+	padding-left: 16px;
 }
-
-.fixed-content{
-	background-color: #ffffff;
+.list-md{
+	margin-bottom: 0px;
 }
